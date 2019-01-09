@@ -1,0 +1,15 @@
+.header {
+	height: 100px;
+    width: 100%;
+    padding: 0px 30px;
+    display: flex;
+	background-color: rgb(223, 218, 211);
+	align-items: center;
+    justify-content: space-between;
+    font-weight: bolder;
+}
+
+.company-name, .time{
+    font-size: 25px;
+}
+

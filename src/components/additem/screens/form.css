@@ -1,0 +1,11 @@
+.form{
+    padding:20px;
+}
+
+.form input,.form button,.form select{
+    height: 50px;
+    font-size: 30px;
+    width: 100%;
+    margin: 10px;
+}
+

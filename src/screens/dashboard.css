@@ -1,0 +1,28 @@
+.box{
+	display: flex !important;
+	flex-direction: column !important;
+	align-items: center !important;
+	justify-content: space-around !important;
+	margin: 10px !important;
+	height: 170px !important;
+	flex-wrap: wrap !important;
+  border-radius: 20px !important;
+  font-size: 30px !important;
+	width:240px !important;
+	cursor: pointer !important;
+	text-decoration: none;
+}
+.icon{
+font-size: 50px !important;
+color:white !important;
+margin-right: 30px;
+}
+
+.box-container {
+	display: flex;
+	background-color: rgb(122, 119, 119);
+	/* background:black; */
+	flex-flow: row wrap;
+	justify-content: space-between;
+	height: 100vh;
+}

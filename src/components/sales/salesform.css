@@ -1,0 +1,96 @@
+#product,
+#quantity,
+.button {
+	height: 70px;
+	border-radius: 5px;
+	border: 1px solid rgb(167, 162, 162);
+	outline: none;
+	font-family: sans-serif, monospace;
+	font-size: 20px;
+	padding: 5px;
+}
+#product,
+.results {
+	width: 75%;
+	border-radius: 5px 5px 0px 0px;
+}
+#quantity,
+.button {
+	width: 10%;
+	margin-left: 20px;
+}
+
+.button {
+	margin-top: -4px !important;
+}
+
+.window-content {
+	padding: 0px 10px !important;
+}
+.results {
+	border: 1px solid rgb(201, 187, 187);
+	background-color: rgb(247, 241, 241);
+	min-height: 50px;
+	position: absolute;
+	border-radius: 0px 0px 5px 5px;
+	transition: 1s ease;
+}
+.card {
+	width: 30%;
+	float: left;
+	height: 200px;
+	border: 1px solid rgb(201, 187, 187);
+	background-color: rgb(247, 241, 241);
+	border-radius: 20px;
+	margin-left: 13%;
+	text-align: center;
+	padding: 5px;
+	align-items: center;
+	
+}
+.received .heading,
+.return .heading {
+	font-size: 20px;
+}
+
+.amount {
+	font-size: 50px;
+    font-weight: bold;
+    width: 200px;
+    margin: 10px auto;
+    border: none;
+    background-color: rgb(247, 241, 241);
+    text-align: center;
+    appearance: none;
+} 
+
+.amount::-webkit-inner-spin-button, 
+.amount::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#finalize-btn{
+    width: 100% !important;
+    text-align: center !important;
+    margin: 20px 0px 0px 0px !important;
+    padding: 10px !important;
+    font-size: 50px !important;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+
+.window{
+  overflow-y: auto;
+}
+
+
+
+
+th {
+	font-weight: bold;
+}
+th,
+td {
+	padding: 8px !important;
+}
