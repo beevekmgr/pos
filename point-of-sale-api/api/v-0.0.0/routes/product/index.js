@@ -7,5 +7,7 @@ router.post('/getProducts', productController.getProducts);
 router.post('/addProduct', productController.addProduct);
 router.post('/addUnit', productController.addUnit);
 router.post('/getUnits', productController.getUnits);
+router.post('/searchName', productController.searchProductsByName);
+router.post('/searchBarcode', productController.searchProductsByBarcode);
 
 module.exports = router;

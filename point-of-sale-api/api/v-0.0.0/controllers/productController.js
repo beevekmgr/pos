@@ -40,6 +40,28 @@ const productController = {
 			console.log(error)
 			res.json({ success: false, message: 'error' });
 		}
+	},
+	async searchProductsByName(req,res){
+		try{
+			const searchText = req.body.searchProduct;
+			const query = {name : {$regex : new RegExp('^' + searchText, 'i')}} 
+			const product = await Product.find(query);
+			res.json({success: true , product , searchText});
+		} catch (error) {
+			console.log(error);
+			res.json({success : false , message : 'error'});
+		}
+	},
+	async searchProductsByBarcode(req,res){
+		try{
+			const searchText = req.body.searchProduct;
+			const query = {barcode : {$regex : new RegExp('^' + searchText)}} 
+			const product = await Product.find(query);
+			res.json({success: true , product , searchText});
+		} catch (error) {
+			console.log(error);
+			res.json({success : false , message : 'error'});
+		}
 	}
 };
 
