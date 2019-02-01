@@ -43,6 +43,10 @@ const ProductSchema = new Schema({
 		ref: 'Unit',
 		required: true
 	},
+	productImage:{
+		type : String,
+		required : true
+	},
 	description: {
 		type: String,
 		required: true

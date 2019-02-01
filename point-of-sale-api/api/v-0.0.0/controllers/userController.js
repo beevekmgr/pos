@@ -45,9 +45,14 @@ const userController = {
 			res.json({ success: false, errors: { mainError: "'User already exists' " } });
 			return;
 		}
-
-		const user = new User(data);
-		user.save((err, data) => {
+		const user = new User({
+			name : req.body.name,
+			username : req.body.username,
+			password : req.body.password,
+			userImage : req.file.path,
+			role : req.body.role
+		});
+		user.save((err) => {
 			if (err) {
 				console.log(err);
 				res.json({ success: false, errors: { mainError: "'Error in server' " } });
