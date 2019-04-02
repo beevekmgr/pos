@@ -3,43 +3,40 @@ import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 const TransactionSchema = new Schema({
-    user_id : {
-        type: mongoose.Schema.Types.ObjectId,
-        required : true
-    },
-	user : {
-        type : String , 
-        ref : 'User',
-        required : true
-    },
-	type : {
-		type: String,
-		required: true
-	},
+    // user_id : {
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     required : true
+    // },
+	// user : {
+    //     type : String , 
+    //     ref : 'User',
+    //     required : true
+    // },
+	// type : {
+	// 	type: String,
+	// 	required: true
+	// },
 	date : {
 		type: Date,
 		required: true
     },
-    discountPercent : {
-        type : Number,
-
-    },
-    total : {
+    specifications : [{
+       product : {type : mongoose.Schema.Types.ObjectId , ref : 'Product' , required : true},
+       quantity : {type : Number , required : true},
+       price : {type : Number},
+       discountPercent : {type : Number}
+    }],
+     total : {
         type : Number,
         required : true
     },
-    products : {
-        type : String,
-        ref : 'Product',
-        required : true
-    }
     
 });
 
 TransactionSchema.statics = {
 	async getTransaction() {
 		try {
-			const transaction = await this.find({});
+			const transaction = await this.find({}).select('date specifications total ').populate('specifications.product', 'name');
 			return transaction;
 		} catch (err) {
 			return err;
