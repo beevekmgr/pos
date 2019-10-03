@@ -24,7 +24,7 @@ export default class Header extends Component {
     return (
       <div className = "header">
          <div className="company-name">
-            <Link to = "/app">COMPANY NAME</Link>
+            <Link to = "/app">MEDEasy</Link>
          </div>
          <CurrentDateAndTime time = {this.state.curTime} />
       </div>

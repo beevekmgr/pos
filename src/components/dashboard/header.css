@@ -1,15 +1,28 @@
 .header {
-	height: 100px;
+    height: 100px;
     width: 100%;
     padding: 0px 30px;
     display: flex;
-	background-color: rgb(223, 218, 211);
-	align-items: center;
+    background-color: rgb(43, 42, 42);
+    align-items: center;
     justify-content: space-between;
     font-weight: bolder;
-}
-
-.company-name, .time{
+  }
+  
+  .company-name > a,
+  .time {
     font-size: 25px;
-}
-
+    text-decoration: none;
+    color: white;
+  }
+  
+  .company-name > a {
+    border: 1px solid skyblue;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .company-name > a:hover {
+    background-color: rgb(143, 138, 138);
+  }
+  
