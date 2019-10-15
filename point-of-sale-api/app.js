@@ -10,8 +10,11 @@ import supplierRouter from './api/v-0.0.0/routes/supplier/index';
 import productRouter from './api/v-0.0.0/routes/product/index';
 
 import cors from 'cors';
-mongoose.connect('mongodb://localhost/pos', () => console.log('Database connected successfully'));
-const app = express();
+mongoose.connect(
+	'mongodb+srv://bibek123:bibek123@poscluster-1krmo.mongodb.net/test?retryWrites=true&w=majority',
+	() => console.log('Database connected successfully')
+  );
+  const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
