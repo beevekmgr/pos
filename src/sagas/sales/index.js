@@ -4,7 +4,7 @@ import { call, put } from 'redux-saga/effects';
 import { GET_ITEM_SUCCESS } from '../../constants/types';
 
 export function* getItem() {
-  const response = yield call(axios.post, `${MEDEasy}/api/medicines`, {
+  const response = yield call(axios.get, `${MEDEasy}/api/medicines`, {
     headers: {
       'Content-Type': 'application/json'
     }
